@@ -13,7 +13,7 @@ class Maze extends JPanel implements ActionListener
   Cell[][] cells;
   int currentX;  // not used, only there to stifle the compiler
   int currentY;
-  Timer timer1 = new Timer(500, this);
+  Timer timer2 = new Timer(500, this);
 
   // maze reader
   void readFromFile( String filename ) {
@@ -278,8 +278,8 @@ public class MazeApp implements ActionListener
   {
     if(e.getSource() == start1Button);
     {
-      maze.timer1.start();
-      maze.leastVisitedNeighbour();
+      maze.timer2.start();
+      maze.randomStep();
     }
   }
 
