@@ -15,7 +15,7 @@ class Maze extends JPanel implements ActionListener
   int currentY;
   Timer timer1 = new Timer(500, this);
 
-
+  // maze reader
   void readFromFile( String filename ) {
       final String WALL = "#";
       final String FLOOR = " ";
@@ -61,15 +61,16 @@ class Maze extends JPanel implements ActionListener
     {
       for(int j = 0; j < height; j++)
       {
-        cells[i][j].draw(g,10*i,10*j);
+        cells[i][j].draw(g,10*i,10*j);//drawing every cell
       }
     }
   }
+
   public void actionPerformed(ActionEvent e)
   {
 
   }
-
+  //random step algorithm
   void randomStep() {
       int dx[] = {1, 0, -1, 0};
       int dy[] = {0, 1, 0, -1};
@@ -90,6 +91,7 @@ class Maze extends JPanel implements ActionListener
           timer2.stop();
       }
   }
+  //least visited neighbour algorithm
   /*void leastVisitedNeighbour()
   {
     int[][] vis = new int[width][height];
@@ -126,7 +128,7 @@ class Maze extends JPanel implements ActionListener
   }*/
 }
 
-
+//cell class
 abstract class Cell
 {
   void draw(Graphics g, int px, int py){}
