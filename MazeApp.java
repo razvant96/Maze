@@ -137,7 +137,7 @@ abstract class Cell
   void leave(){}
   void visit(){}
 }
-
+//current position
 class CurrentPos extends Cell
 {
   private int px;
