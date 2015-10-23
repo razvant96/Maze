@@ -282,7 +282,7 @@ public class MazeApp implements ActionListener
       maze.randomStep();
     }
   }
-
+// comment
   void run()
   {
     this.maze.readFromFile("maze.txt");
